@@ -11,157 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(183, 245, 224);
-        margin: 0; /* Reset default body margin */
-      }
-
-      nav {
-        background-color: #687c63;
-        color: white;
-        width: 70%;
-        height: 70px;
-        padding: 10px 2%; /* Use percentage for padding */
-        margin-top: 40px;
-        margin-left: 15%;
-        border-radius: 30px;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo {
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-      }
-      .logo img {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-      }
-
-      nav ul {
-        list-style-type: none;
-        margin-right: 30px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin: 0 25px;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: bold;
-        transition: color 0.3s ease;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-
-      nav ul li a:hover {
-        text-decoration: none;
-        color: rgb(21, 165, 110);
-      }
-
-      /* A container to center the search bar */
-      .search-container {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0;
-        margin-top: 10px; /* Push content below the fixed nav */
-      }
-
-      .searchbar {
-        width: 50%;
-        max-width: 600px; /* Set a max-width for larger screens */
-        height: 50px;
-        display: flex;
-        align-items: center;
-        background-color: #99cfc28c;
-        border-radius: 30px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .searchbar:hover {
-        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.795);
-      }
-
-      .searchbar form {
-        display: flex;
-        width: 100%;
-        align-items: center;
-      }
-
-      .searchbar button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        margin-right: 10px;
-        font-size: 20px;
-        color: #333;
-        transition: color 0.3s ease;
-      }
-
-      .searchbar input {
-        width: 100%;
-        flex: 1;
-        background: transparent;
-        border: none;
-        font-size: 20px;
-        outline: none;
-        padding: 10px 20px;
-        color: rgb(0, 0, 0);
-      }
-
-      .searchbar input::placeholder {
-        color: #ffffff;
-        opacity: 1;
-      }
-
-      .home {
-        padding: 20px;
-        max-width: 1100px; /* Use max-width for responsiveness */
-        height: 400px;
-        margin: 20px auto 0 auto; /* Center the container */
-        color: whitesmoke;
-        border-radius: 30px;
-        text-align: start;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Example of a gradient background */
-        background: linear-gradient(135deg, #687c63, #82b4a7);
-      }
-
-      .home h1 {
-        font-size: 40px;
-        margin-top: 10px;
-        margin-left: 10px;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-
-      footer {
-        background-color: #687c63;
-        color: white;
-        text-align: center;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        margin-top: 20px; /* Add space above the footer */
-      }
-    </style>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav>
@@ -169,25 +20,34 @@
         <img src="logo/logo.png" alt="logo" />
       </div>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="search-container">
-      <div class="searchbar">
-        <form action="" class="Search">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
+    <!-- Main content wrapper -->
+    <main>
+      <div class="search-container">
+        <div class="searchbar">
+          <form action="/search" method="GET" class="search-form">
+            <input type="text" name="q" placeholder="Search..." />
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="home">
-      <h1>Welcome</h1>
-    </div>
+      <div class="home">
+        <h1>Welcome</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+          molestias eius error asperiores earum ullam optio nesciunt repellendus
+          voluptas nemo doloremque qui quidem inventore, itaque temporibus,
+          quaerat perferendis soluta. Quisquam!
+        </p>
+      </div>
+    </main>
     <footer>
       <p>&copy; 2023. All rights reserved.</p>
     </footer>
