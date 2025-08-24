@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me | My Awesome Website</title>
+    <title>Services | My Awesome Website</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -78,33 +78,57 @@
         color: rgb(21, 165, 110);
       }
 
-      .about-section {
+      .services-section {
         padding: 40px 20px;
         max-width: 1100px;
         margin: 40px auto 0 auto;
-        color: whitesmoke;
-        border-radius: 30px;
-        text-align: start;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
-        background: linear-gradient(135deg, #687c63, #82b4a7);
+        text-align: center;
       }
 
-      .about-section h1 {
+      .services-section h1 {
         font-size: 40px;
-        margin-top: 10px;
-        margin-left: 10px;
+        margin-bottom: 40px;
+        color: #333;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .services-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .service-card {
+        background: linear-gradient(135deg, #687c63, #82b4a7);
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        width: 30%;
+        min-width: 280px;
+        box-sizing: border-box;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
+      }
+
+      .service-card h3 {
+        font-size: 24px;
+        margin-top: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
 
-      .about-section p {
-        font-size: 22px;
-        margin-top: 20px;
-        margin-left: 10px;
-        line-height: 1.7;
-        color: white;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      .service-card p {
+        font-size: 18px;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
 
@@ -127,27 +151,40 @@
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="about-section">
-      <h1>About Me</h1>
-      <p>
-        This is the about page. Here, I can share more details about my journey,
-        skills, and what I'm passionate about. My background in web development
-        started with a fascination for how websites work, which quickly grew
-        into a full-fledged career.
-      </p>
-      <p>
-        I specialize in creating dynamic and beautiful web pages using the
-        latest technologies. My goal is to always write clean, efficient, and
-        maintainable code. When I'm not coding, I enjoy exploring new
-        technologies, contributing to open-source projects, and hiking in the
-        great outdoors.
-      </p>
+    <div class="services-section">
+      <h1>Our Services</h1>
+      <div class="services-container">
+        <div class="service-card">
+          <h3>Web Design</h3>
+          <p>
+            We create stunning, modern, and responsive designs that are tailored
+            to your brand. Our focus is on user experience and creating visually
+            appealing layouts that engage your audience.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Front-End Development</h3>
+          <p>
+            Bringing designs to life with clean, efficient, and scalable code.
+            We specialize in HTML, CSS, and JavaScript frameworks to build
+            interactive and high-performance web applications.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Performance Optimization</h3>
+          <p>
+            We analyze and improve your website's speed and performance to
+            ensure a fast, smooth user experience, which is crucial for user
+            retention and search engine rankings.
+          </p>
+        </div>
+      </div>
     </div>
 
     <footer>
